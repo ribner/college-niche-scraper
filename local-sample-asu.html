@@ -1,0 +1,2015 @@
+
+<!DOCTYPE html><html ng-app="cpApp"><head id="ctl00_ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=10" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e7f38bcb79","applicationID":"2460872","transactionName":"MVxVZ0NWXkNVUEUKWQgWdmBhGENTXFxeD0VJSlJQRV5fXkccQwJYDVBZVEIZUUNESw==","queueTime":0,"applicationTime":314,"ttGuid":"F6C24790ED5705A2","agent":"js-agent.newrelic.com/nr-632.min.js"}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgEGVV5UGwEEUlFaAAM="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=(t(1),t("ee").create()),i=t(2)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:24,2:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,2:24,ee:"QJf3ax"}],9:[function(t,e){var n=(t(2),t("ee").create()),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,2:24,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=(t(2),t("ee").create()),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,2:24,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=(t(2),window),f=c.document,u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-632.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script><title>
+Arizona State University - Rankings - Niche</title><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<!-- Google Tag Manager --><script>
+dataLayer = [{  "User.Registered": true,  "Profile.GUID": "b212d30a-2d53-42db-b405-ed141a637592",  "Profile.Name": "arizona-state-university",  "Profile.Location.State": "az",  "Profile.Locked": "false",  "Profile.School.Type": "traditional",  "Profile.Section.Name": "rankings",  "Profile.Type": "college",  "User.Location.State": "ma",  "User.Location.City": "boston",  "User.Email": "elliott.ribner@techstars.com",  "User.Gender": "no answer",  "User.GUID": "6af2a89f-d6d9-42b8-838a-f5f19593a825",  "User.Race": "i prefer not to answer",  "User.Registration.Reason": "content",  "User.Registration.Source": "internal",  "User.Religion": "i prefer not to answer",  "User.Role": "other",  "User.Location.ZIP": "02163"}];
+dataLayer[0]["CustomScreenDisplay"] = ((window.innerWidth || document.documentElement.clientWidth) < 768) ? "mobile" : "desktop";</script><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WGBG3Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function (w, d, s, l, i) {
+w[l] = w[l] || []; w[l].push({
+'gtm.start':
+new Date().getTime(), event: 'gtm.js'
+}); var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+'//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+})(window, document, 'script', 'dataLayer', 'GTM-WGBG3Q');</script><!-- End Google Tag Manager -->
+<script src="//cdn.optimizely.com/js/8921220.js"></script><link href="/images/favicon/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed" /><link href="/images/favicon/apple-touch-icon-72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72" /><link href="/images/favicon/apple-touch-icon-114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114" /><link href="/images/favicon/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144" /><link href="/images/favicon/favicon.png" rel="icon" /><meta content="#53A63A" name="msapplication-TileColor" /><meta content="/images/favicon/tileicon.png" name="msapplication-TileImage" /><link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:800|Source+Sans+Pro:300,400,600,700" /><link rel="stylesheet" type="text/css" href="/combres.axd/siteCss/13808925/"/><script type="text/javascript" src="/combres.axd/siteJs/814999757/"></script><script type="text/javascript"> 
+// Required to prevent iOS6 caching ajax requests
+$.ajaxSetup({
+type: 'POST',
+headers: { "cache-control": "no-cache" }
+});</script><script type="text/javascript">
+var LIQWID_target_parameters='role=other;zip=02163;';</script>
+<script type="text/javascript">var isRegistered = true; var processLeads = true; var registeredUsername = "elirib"; var userRole = "Other"; var isSendable = false; var isSchoolPage = false;</script>
+<link rel="stylesheet" type="text/css" href="/combres.axd/schoolCss/-1304679168/"/><script type="text/javascript" src="/combres.axd/schoolJs/132724840/"></script>
+<link rel="stylesheet" href="/_css/rankings-entity.css" /><script>
+$(document).ready(function () {
+if ((navigator.platform.indexOf("iPad") == -1) && (navigator.platform.indexOf("iPhone") == -1)) {
+$(document).tooltip({ items: '.factors td', position: { at: 'left top', my: 'left bottom' } });
+}
+$('.social-icon').on('click', function() {
+var $this = $(this),
+term = $this.attr('data-term'),
+url = '',
+urlParams = 'utm_medium=social&utm_campaign=CollegeProfile';
+urlParams = (location.href.indexOf('?') != -1) ? '&' + urlParams : '?' + urlParams;
+if (term) urlParams += '&utm_term=' + encodeURIComponent(term);
+if ($this.is('.facebook')) {
+urlParams += '&utm_source=facebook';
+url = 'http://www.facebook.com/sharer.php?u=' + encodeURIComponent(location.href + urlParams);
+} else if ($this.is('.twitter')) {
+urlParams += '&utm_source=twitter';
+url = 'https://twitter.com/intent/tweet?url=' +
+encodeURIComponent(location.href + urlParams);
+if ($this.attr('data-text').length > 0) {
+var text = '&text=' + encodeURIComponent($this.attr('data-text'));
+url += text;
+}
+} else if ($this.is('.googleplus')) {
+urlParams += '&utm_source=googleplus';
+url = 'https://plus.google.com/share?url=' + encodeURIComponent(location.href + urlParams);
+}
+window.open(url, 'Sharer', 'toolbar=0, status=0, width=550, height=420');
+});
+$('.factors-wrap').each(function() {
+$(this).attr('data-height', $(this).find('.factors').outerHeight());
+});
+$('.grade').on('click', function() {
+$('.factors-wrap').height(0);
+$('.close-factors').hide();
+$('.close-factors').siblings('.reveal-factors').show();
+var $factorsWrap = null;
+if ($(this).hasClass('referred') || $(this).hasClass('overall')) {
+$factorsWrap = $(this).parent().find('.factors-wrap');
+} else {
+$factorsWrap = $(this).closest('li').find('.factors-wrap');
+}
+if ($factorsWrap.height() === 0) {
+$factorsWrap.height($factorsWrap.attr('data-height'));
+$(this).find('.close-factors').show();
+$(this).find('.reveal-factors').hide();
+} else {
+$(this).find('.reveal-factors').show();
+}
+});
+});</script><meta property="fb:app_id" content="298822776951871" /><meta property="og:site_name" content="Niche.com" /><meta property="og:image" content="https://colleges.niche.com/images/share/social_share_ALL_COLLEGE_DEFAULT.jpg" /><meta name="robots" content="noarchive" /><meta name="viewport" content="width = 1000" />
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@NicheColleges"><meta name="twitter:title" content="2015 Best College Rankings | Niche"><meta name="twitter:description" content="Arizona State rankings among 1,500 US colleges based on student reviews and statistics."><meta name="twitter:image:src" content="https://colleges.niche.com/images/thumbnail/860/300/300/" /><meta name="description" content="Arizona State rankings among 1,500 US colleges based on student reviews and statistics." /><meta name="keywords" content="Arizona State University, Arizona State, niche, rankings, Arizona State University rankings, college rankings, colleges, students" /><meta property="og:image" content="https://colleges.niche.com/images/share/fb-grade-share-aminus.jpg" /><link rel="image_src" href="/images/share/fb-grade-share-aminus.jpg" />
+<script type="application/ld+json">
+{
+"@context": "http://schema.org",
+"@type": "WebSite",
+"url": "https://colleges.niche.com/",
+"potentialAction": {
+"@type": "SearchAction",
+"target": "https://colleges.niche.com/s/?q={search_term_string}",
+"query-input": "required name=search_term_string"
+}
+}
+</script><!--[if lt IE 9]><script>
+document.createElement('section');
+document.createElement('article');</script><![endif]--></head><body id="ctl00_ctl00_mainBodyTag" ontouchstart=""><form name="aspnetForm" method="post" action="/arizona-state-university/rankings/" id="aspnetForm" class="outerForm"><div><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="5ElPYNt4M3Cz5opjCz5yqCuarQmv80GG0Qc8AK51+FLvSolGSoOTso2QpBjTBY62VEpE69ir+IJqDE6Jg29qw5khUQw=" /></div>
+<header><div class="niche-bar"><a href="/" class="niche-logo">
+<img src="/images/niche-horizontal-transparent.png?v=8002e52" alt="Niche" /></a><ul class="verticals">
+<li><a href="https://local.niche.com/" class="beta">Local</a></li>
+<li><a href="https://k12.niche.com/">K-12</a></li>
+<li class="selected"><a href="/">Colleges</a></li>
+<li><a href="https://ink.niche.com" target="_blank">Ink</a></li></ul><ul class="account">
+<li><div class="open-niche-acct">My Niche <span class="ss-icon">&#x25BE;</span></div></li>
+</ul></div>
+<div class="secondary-bar"><ul>
+<li>
+<a id="ctl00_ctl00_linkTabHome" href="/">Home</a>
+</li>
+<li data-menu="find-a-college">
+<a id="ctl00_ctl00_linkTabCollege" href="/search/">Find colleges</a>
+<div class="main-nav-dropdown find-a-college">
+<ul>
+<li><a href="/search/"><span>&#x1F50E;</span>College search</a></li>
+<li><a href="/recommendations/"><span>&#x22C6;</span>Recommendations</a></li>
+<li><a href="/compare/"><span>&#x2696;</span>Compare colleges</a></li>
+<li><a href="/majors/"><span>&#x1F4D5;</span>College majors</a></li>
+<li><a href="/majors/compare/"><span>&#x2696;</span>Compare majors</a></li>
+<li><a href="/all/"><span>&#xED50;</span>List of colleges</a></li>
+<li><a href="/chanceme/"><span>&#xF000;</span>Chance Me</a></li>
+</ul> </div>
+</li>
+<li data-menu="find-scholarships">
+<a id="ctl00_ctl00_linkTabScholarship" href="/cpscholarships/">Find scholarships</a>
+<div class="main-nav-dropdown find-scholarships">
+<ul>
+<li><a href="/scholarships/"><span>&#x1F50E;</span>Scholarship search</a></li>
+<li><a href="/scholarships/match.aspx"><span>&#x22C6;</span>Scholarship matcher</a></li>
+<li><a href="/cpscholarships/"><span>&#x1F4B0;</span><div class="prowler-scholarships">$50,000+ in Niche Scholarships</div></a></li>
+<li class="subset"><a href="/scholarship/apply.aspx">$2,000 &quot;No Essay&quot; Scholarship<sup>TM</sup> <em>(for everyone)</em></a></li>
+<li class="subset padBottom"><a href="/survey/">$1,000 Survey Scholarship <em>(for college students)</em></a></li>
+</ul>
+</div>
+</li>
+<li>
+<a id="ctl00_ctl00_linkTabRankings" class="just-updated" href="/rankings/">College rankings</a>
+</li></ul><div class="search">
+<div class="search-btn ss-icon">&#x1F50E;</div>
+<input name="ctl00$ctl00$headSearch$baseAutocomplete$txtInput" type="text" id="ctl00_ctl00_headSearch_baseAutocomplete_txtInput" maxlength="255" autocomplete="off" class="searchBox" placeholder="Search colleges" /><input name="ctl00$ctl00$headSearch$baseAutocomplete$hdnSelectedValue" type="hidden" id="ctl00_ctl00_headSearch_baseAutocomplete_hdnSelectedValue" watch-for-value="true" /><script type="text/javascript">
+$('#ctl00_ctl00_headSearch_baseAutocomplete_txtInput').prowlerAutocomplete({
+ajaxUrl: '/_ajax/AutoCompletes.asmx/SearchSchools',
+stateSelector: '#ctl00_ctl00_headSearch_baseAutocomplete_ddlState',
+mustMatch: false,
+clearOnSelect: false,
+handler: function (e, term) {
+doHeadSearch(e, term);
+},
+hiddenField: '#ctl00_ctl00_headSearch_baseAutocomplete_hdnSelectedValue',
+requestConfig: {'limit':10,'includeUnpublishedSchools':'false','includePlaceholders':'true','includedTypes':'1'}
+});</script>
+</div></div></header>
+<div class="leaderboard"><div id="ctl00_ctl00_headerAd_adunit" class="ad-unit" style="height:90px;width:728px;"></div><script type="text/javascript">
+$(document).ready(function () {
+googletag.cmd.push(function () { googletag.display('ctl00_ctl00_headerAd_adunit');});
+});</script></div><div class="mainBlock cf"><noscript><div class="message" style="background: #fae4e4; color: #a52a2a; text-align: center; line-height: 35px;">Niche requires Javascript to work correctly. Please <a href="http://www.enable-javascript.com/">turn it on</a> if you're experiencing issues. </div></noscript>
+<div class="school-header">
+<h1 itemprop="name"><a id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_linkSchool" itemprop="url" href="/arizona-state-university/">Arizona State University</a><span>Rankings</span></h1><ul class="cf"><li class="grade">
+<a href="/arizona-state-university/rankings/" id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_hrefNicheGrade"><div class="large overall-grade grade-366"></div><div class="grade-label">Overall<br/>Niche Grade</div></a></li><li class="ordinal">
+</li>
+<li>
+<span class="label">Location</span>
+<span class="value" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress"><a id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_linkLocation" itemprop="url" href="https://local.niche.com/tempe-maricopa-az/"><span itemprop='addressLocality'> Tempe</span>, <span itemprop='addressRegion'>AZ</span></a></span>
+</li>
+<li>
+<span class="label">Undergrads</span>
+<span class="value">49,945</span>
+</li>
+<li>
+<span class="label">Tuition (in-state)</span>
+<span class="value">$23,654 ($9,861)</span>
+</li>
+<li>
+<span class="label">Acceptance Rate</span>
+<span class="value">80 %</span>
+</li>
+<li class="more-stats">
+<span class="value"><a id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_linkStats" href="/arizona-state-university/statistics/">More statistics . . .</a></span></li></ul><div id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_ymnBar" class="ymnBar">
+<div id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_beforeDeciding" class="beforeDeciding simple">
+<a id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_linkYes" title="Yes" class="ymnBtn yes" data-schoolId="b212d30a-2d53-42db-b405-ed141a637592" data-interest="High" href="../../_controls/school/#"><em>Yes</em><span>I'm interested, tell this school</span></a>
+<a id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_linkMaybe" title="Maybe" class="ymnBtn maybe" data-schoolId="b212d30a-2d53-42db-b405-ed141a637592" data-interest="Low" href="../../_controls/school/#"><em>Maybe</em><span>Bookmark for later</span></a>
+<a id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_linkNo" title="No" class="ymnBtn no" data-schoolId="b212d30a-2d53-42db-b405-ed141a637592" data-interest="Remove" href="../../_controls/school/#"><em>No</em><span>Show me better matches</span></a>
+<span id="26851878-04d1-42ca-9c00-cbfbb14903b7" class="disclaimer light" title="tip">What does it mean to express interest?</span><script type="text/javascript">$("#26851878-04d1-42ca-9c00-cbfbb14903b7").tooltip({content: '<strong>Are You Interested In This School?</strong><br/> <p style="margin: 0px;">There are a lot of schools out there, and we are here to help you keep track of them. Each time you select &quot;<span class="red bolded">Yes</span>&quot;, &quot;<span class="orange bolded">Maybe</span>&quot;, or &quot;<span class="yellow bolded">No</span>&quot; for a school we\'ll add it into your account\'s &quot;My Schools&quot; list.</p><p style="margin: 10px 0px 0px 0px;">We\'ll also keep you up to date on deadlines and new content for schools you\'ve put into your &quot;<span class="red bolded">Yes</span>&quot; or &quot;<span class="orange bolded">Maybe</span>&quot; lists to keep you informed.</p>',position: { at: 'center bottom', my: 'center top' }, tooltipClass: 'tooltip-width-300'});</script>
+</div><div class="decisionError hide"><h6>Oops! There was an error.</h6><p>Reload the page and try again.</p></div><div id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_afterDeciding" class="afterDeciding hide">
+<span class="loading">Saving your interest</span>
+<span class="yesMaybeMsg">This school has been saved to <a href="/account/schools.aspx">your schools list</a>.</span>
+<span class="noMsg">This school has been added to your <a href="/account/schools.aspx?click=no">&quot;No&quot; schools</a> list and won't show up in your updates.</span>
+</div>
+<div id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_recommendedBar" class="recommendedBar hide">
+<a id="ctl00_ctl00_BelowHeaderPlaceHolder_schoolTitle_linkRec" href="/benjamin-franklin-institute-of-technology/">Take a look at your next recommended school, <strong>Benjamin Franklin Institute of Technology</strong>.</a> <span class="sidenote">For more schools, visit your <a href="/account/schools.aspx?click=recommended">recommended schools list</a>.</span>
+</div></div></div>
+<div class="navContent"><nav>
+<div class="sidebar-nav-holder"><ul class="schoolTabs">
+<li class="open">
+<span class="tab1">Summary</span>
+<div class="accordion" style="height: auto;">
+<ul class="section">
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/">School Home</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/statistics/">Statistics</a>
+</li>
+<li class="open noChildren">
+<a class="tab2" href="/arizona-state-university/rankings/">Rankings</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/the-best--and--worst/">The Best & Worst</a>
+</li>
+</ul>
+</div></li>
+<li>
+<span class="tab1">About the School</span>
+<div class="accordion">
+<ul class="section">
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/academics/">Academics</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/admissions/">Admissions</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/branch-campuses/">Branch Campuses</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/jobs--and--internships/">Jobs & Internships</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/majors/">Majors</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/scholarships/">Scholarships</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/videos--and--photos/">Videos & Photos</a>
+</li>
+</ul>
+</div></li>
+<li>
+<span class="tab1">About the Students</span>
+<div class="accordion">
+<ul class="section">
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/alumni--and--post--grads/">Alumni & Post-Grads</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/diversity/">Diversity</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/drug-safety/">Drug Safety</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/greek-life/">Greek Life</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/guys--and--girls/">Guys & Girls</a>
+</li>
+</ul>
+</div></li>
+<li>
+<span class="tab1">About the Campus</span>
+<div class="accordion">
+<ul class="section">
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/administration/">Administration</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/athletics/">Athletics</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/campus-food/">Campus Food</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/campus-housing/">Campus Housing</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/campus-quality/">Campus Quality</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/health--and--safety/">Health & Safety</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/parking/">Parking</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/technology/">Technology</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/transportation/">Transportation</a>
+</li>
+</ul>
+</div></li>
+<li>
+<span class="tab1">About the Location</span>
+<div class="accordion">
+<ul class="section">
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/local-area/">Local Area</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/off--campus-dining/">Off-Campus Dining</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/off--campus-housing/">Off-Campus Housing</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/party-scene/">Party Scene</a>
+</li>
+<li class="noChildren">
+<a class="tab2" href="/arizona-state-university/weather/">Weather</a>
+</li>
+</ul>
+</div></li>
+</ul><div class="shadow"></div></div>
+<div class="sidebar-ad">
+<div id="ctl00_ctl00_NavPlaceHolder_ScrollingSchoolPageAd_adunit" class="ad-unit" style="height:600px;width:160px;"></div><script type="text/javascript">
+$(document).ready(function () {
+googletag.cmd.push(function () { googletag.display('ctl00_ctl00_NavPlaceHolder_ScrollingSchoolPageAd_adunit');});
+});</script></div></nav></div>
+<div id="ctl00_ctl00_mainContentDiv" class="mainContent">
+<div class="section"><div class="ajaxSlide">
+<div class="entity-ranking-page"><a href="/rankings/" class="rankings-banner"></a>
+<div class="ranking-overall-wrap">
+<div class="ad">
+<div id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_TopWidgetAd_adunit" class="ad-unit" style="height:250px;width:300px;"></div><script type="text/javascript">
+$(document).ready(function () {
+googletag.cmd.push(function () { googletag.display('ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_TopWidgetAd_adunit');});
+});</script>
+</div>
+<div class="ranking-overall">
+<div class="grade overall">
+<div class="large overall-grade grade-366"></div>
+<div class="reveal-factors overall">Details</div>
+<div class="close-factors overall">Hide</div>
+</div>
+<div class="label">
+<h3><a id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_linkOverall" href="/rankings/best-overall/">Overall Niche Grade</a></h3>
+<div class="placement">
+#169 of 892</div>
+<div class="description">
+<p>Best Colleges ranks 892 colleges and universities based on 50 statistics and 12 million ratings from 300,000 students. A high ranking indicates that the college is an elite academic institution that attracts a diverse set of high-achieving students and faculty, the college is affordable, and the students are very happy with their college experience.</p><p>An additional 678 colleges received a grade but were not eligible for a ranking. For more information, <a href="https://colleges.niche.com/rankings/best-overall/methodology/" target="_blank">read the full methodology</a>.</p>
+</div>
+</div>
+<div class="factors-wrap overall">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Niche Academics grade, which incorporates statistics and student surveys regarding academics on campus.'>
+Academics Grade</td>
+<td>
+<div class="small section-grade grade-300"></div></td>
+</tr>
+<tr>
+<td title='Niche Athletics grade, which incorporates statistics and student surveys regarding athletics on campus.'>
+Athletics Grade</td>
+<td>
+<div class="small section-grade grade-433"></div></td>
+</tr>
+<tr>
+<td title='Average cost after financial aid for students receiving grant or scholarship aid, as reported by the college.'>
+Average Net Price</td>
+<td>
+$12,369</td>
+</tr>
+<tr>
+<td title='Niche Campus Quality grade, which incorporates statistics and student surveys regarding facilities on campus.'>
+Campus Quality Grade</td>
+<td>
+<div class="small section-grade grade-366"></div></td>
+</tr>
+<tr>
+<td title='Niche Diversity grade, which incorporates statistics and student surveys regarding diversity on campus.'>
+Diversity Grade</td>
+<td>
+<div class="small section-grade grade-400"></div></td>
+</tr>
+<tr>
+ <td title='Dollar amount of the school’s endowment per total full-time fall enrollment (undergraduate and graduate).'>
+Endowment per Full-Time Student</td>
+<td>
+$8,714</td>
+</tr>
+<tr>
+<td title='Niche Guys & Girls grade, which incorporates statistics and student surveys regarding students on campus.'>
+Guys & Girls Grade</td>
+<td>
+<div class="small section-grade grade-400"></div></td>
+</tr>
+<tr>
+<td title='Niche Health & Safety grade, which incorporates statistics and student surveys regarding health and safety services on campus.'>
+Health & Safety Grade</td>
+<td>
+<div class="small section-grade grade-233"></div></td>
+</tr>
+<tr>
+<td title='Loan default rate of students who graduated three years prior who have not deferred.'>
+Loan Default Rate</td>
+<td>
+8.0 %</td>
+</tr>
+<tr>
+<td title='Niche Local Area grade, which incorporates statistics and student surveys regarding the local area around campus.'>
+Local Area Grade</td>
+<td>
+<div class="small section-grade grade-400"></div></td>
+</tr>
+<tr>
+<td title='Niche Party Scene grade, which incorporates statistics and student surveys regarding nightlife on campus.'>
+Party Scene Grade</td>
+<td>
+<div class="small section-grade grade-433"></div></td>
+</tr>
+<tr>
+<td title='Revenue from private donors (not part of endowment) per total full-time fall enrollment (undergraduate and graduate).'>
+Private Gifts per Full-Time Student</td>
+<td>
+$936</td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the overall experience at the college they currently or recently attend(ed). Includes 121,626 opinions about overall experience from 25,090 unique students. Minimum 10 unique students required at each college. Note: A total of 11,857,508 opinions from 294,497 unique students were used across all of the factors in the Best Overall ranking.'>
+Student Surveys on Overall Experience</td>
+<td>
+4.0 out of 5 <small>652</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-overall/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_hrefOverallRanking" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+<div class="share">
+<h4>Share</h4>
+<div class="social-icon facebook" data-term="RankingsPage"></div>
+<div class="social-icon twitter" data-term="RankingsPage" data-text="2015 Best Colleges ranking from @NicheColleges #bestcolleges"></div>
+<div class="social-icon googleplus" data-term="RankingsPage"></div>
+</div>
+</div>
+</div>
+<div class="section-ranking-wrap">
+<div class="ranking-column">
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-300"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-academics/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl00_hrefSectionRankingLabel">Academics</a>
+</h3>
+<div class="placement">
+#318 of 595</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Percentage of applicants accepted.'>
+Acceptance Rate</td>
+<td>
+80.2 %</td>
+</tr>
+<tr>
+<td title='Total number of faculty awards per full-time faculty member.'>
+Faculty Awards</td>
+<td>
+0.54 %</td>
+</tr>
+<tr>
+<td title='Percentage of full-time faculty who are National Academy members.'>
+Faculty National Academy Membership</td>
+<td>
+0.83 %</td>
+</tr>
+<tr>
+<td title=''>
+Final Grade - Diversity</td>
+<td>
+<div class="small section-grade grade-400"></div></td>
+</tr>
+<tr>
+<td title='Percentage of full-time freshmen who are National Merit/Achievement Scholars.'>
+Freshman National Merit Scholars</td>
+<td>
+1.76 %</td>
+</tr>
+<tr>
+<td title='Percentage of full-time freshman enrollment from the prior year that re-enrolled at the college in the current year.'>
+Freshman Retention Rate</td>
+<td>
+80 %</td>
+</tr>
+<tr>
+<td title='Percentage of undergraduate students who graduate within six years.'>
+Graduation Rate (6-year)</td>
+<td>
+56.8 %</td>
+</tr>
+<tr>
+<td title='Average professor salary at each college normalized against the median household income of the area where the college is located.'>
+Professor Salary Index</td>
+<td>
+2.68</td>
+</tr>
+<tr>
+<td title='Total amount of expenditures dedicated to research per full-time student.'>
+Research Expenditures</td>
+<td>
+$4,118</td>
+</tr>
+<tr>
+<td title='Composite SAT/ACT (normalized to the same scale) of the 25th percentile of enrolled students.'>
+SAT/ACT 25th Percentile</td>
+<td>
+SAT: 1460<br/>ACT: 21</td>
+</tr>
+<tr>
+<td title='Composite SAT/ACT (normalized to the same scale) of the 75th percentile of enrolled students.'>
+SAT/ACT 75th Percentile</td>
+<td>
+SAT: 1860<br/>ACT: 27</td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the academics at the college they currently or recently attend(ed). Includes 814,786 reviews and opinions from 70,648 unique students. Minimum 19 unique students required at each college.'>
+Student Surveys on Academics</td>
+<td>
+3.8 out of 5 <small>773</small></td>
+</tr>
+<tr>
+<td title='Total full-time undergraduate students per full-time undergraduate faculty.'>
+Student-Faculty Ratio</td>
+<td>
+25 : 1</td>
+</tr>
+<tr>
+<td title='Percentage of applicants admitted to the college who enrolled.'>
+Yield</td>
+<td>
+40.7 %</td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-academics/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl00_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-266"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-administration/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl01_hrefSectionRankingLabel">Administration</a>
+</h3>
+<div class="placement">
+#657 of 1,166</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about the quality of the campus administration at the college they currently or recently attend(ed). Includes 689,560 reviews and opinions from 84,401 unique students. Minimum 18 unique students required at each college. '>
+Student Surveys on Administration</td>
+<td>
+3.6 out of 5 <small>924</small></td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the overall experience at the college they currently or recently attend(ed). Includes 121,626 opinions about overall experience from 25,090 unique students. Minimum 10 unique students required at each college. Note: A total of 11,857,508 opinions from 294,497 unique students were used across all of the factors in the Best Overall ranking.'>
+Student Surveys on Overall Experience</td>
+<td>
+4.0 out of 5 <small>652</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-administration/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl01_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-433"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-athletics/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl02_hrefSectionRankingLabel">Athletics</a>
+</h3>
+<div class="placement">
+#50 of 274</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Average attendance of home football games.'>
+Average Home Football Attendance</td>
+<td>
+62,689</td>
+</tr>
+<tr>
+<td title='Average attendance of home men's basketball games.'>
+Average Home Men's Basketball Attendance</td>
+<td>
+6,143</td>
+</tr>
+<tr>
+<td title='Average attendance of home football games within conference.'>
+Conference Average Football Attendance</td>
+<td>
+53,619</td>
+</tr>
+<tr>
+<td title='Average attendance of home men's basketball games within conference.'>
+Conference Average Men's Basketball Attendance</td>
+<td>
+7,631</td>
+</tr>
+<tr>
+<td title='Number of NCAA Championships won since 2000 across Division I, II, and III. Eight sports are measured, including football, men’s and women’s basketball, baseball, softball, men’s and women’s soccer, and hockey. Championships were weighted by division and sport, with Division I getting a 3x multiplier and Division II getting a 2x multiplier. Football and men’s basketball received a 3x multiplier, and baseball and hockey received a 2x multiplier. FCS Football was also included but did not receive a multiplier.'>
+NCAA Championship Score</td>
+<td>
+6</td>
+</tr>
+<tr>
+<td title='Number of NCAA Championships won within the same conference across Division I, II, and III. Eight sports are measured, including football, men’s and women’s basketball, baseball, softball, men’s and women’s soccer, and hockey. Championships by conference were weighted by division, with Division I getting a 3x multiplier and Division II getting a 2x multiplier.'>
+NCAA Championship Score for Conference</td>
+<td>
+19</td>
+</tr>
+<tr>
+<td title='Percentage of male undergraduate students participating in varsity sports.'>
+Percentage of Men in Varsity Sports</td>
+<td>
+0.9 %</td>
+</tr>
+<tr>
+<td title='Percentage of female undergraduate students participating in varsity sports.'>
+Percentage of Women in Varsity Sports</td>
+<td>
+0.7 %</td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the athletics at the college they currently or recently attend(ed). Includes 204,756 opinions from 74,957 unique students. Minimum 10 unique students required at each college.'>
+Student Surveys on Athletics</td>
+<td>
+3.7 out of 5 <small>954</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-athletics/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl02_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-366"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-campus-food/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl03_hrefSectionRankingLabel">Campus Food</a>
+</h3>
+<div class="placement">
+#182 of 1,174</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Average cost of meal plan, as reported by the college.'>
+Average Meal Plan Cost</td>
+<td>
+$3,158</td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the campus food at the college they currently or recently attend(ed). Includes 471,506 reviews and opinions from 64,113 unique students. Minimum 12 unique students required at each college.'>
+Student Surveys on Campus Dining</td>
+<td>
+3.5 out of 5 <small>643</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-campus-food/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl03_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-300"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-dorms/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl04_hrefSectionRankingLabel">Campus Housing</a>
+</h3>
+<div class="placement">
+#415 of 902
+</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Average cost of campus housing, as reported by the college.'>
+Average Housing Cost</td>
+<td>
+$9,094</td>
+</tr>
+<tr>
+<td title='Total housing capacity as a percentage of full-time undergraduate student enrollment, as reported by the college.'>
+Housing Capacity</td>
+<td>
+18 %</td>
+</tr>
+<tr>
+<td title='Rate of crimes committed in on-campus housing facilities per 1,000 students, as reported by the college.'>
+Student Housing Crime Rate</td>
+<td>
+0 per 1000</td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the campus housing at the college they currently or recently attend(ed). Includes 630,153 reviews and opinions from 61,395 unique students. Minimum 15 unique students required at each college.'>
+Student Surveys on Campus Housing</td>
+<td>
+3.6 out of 5 <small>667</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-dorms/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl04_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-366"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-campus/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl05_hrefSectionRankingLabel">Campus Quality</a>
+</h3>
+<div class="placement">
+#146 of 942
+</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Niche Campus Food grade, which incorporates statistics and student surveys regarding food on campus.'>
+Campus Food Grade</td>
+<td>
+<div class="small section-grade grade-366"></div></td>
+</tr>
+<tr>
+<td title='Niche Campus Housing grade, which incorporates statistics and student surveys regarding dorms on campus.'>
+Campus Housing Grade</td>
+<td>
+<div class="small section-grade grade-300"></div></td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the campus facilities at the college they currently or recently attend(ed). Includes 794,326 reviews and opinions from 102,060 unique students. Minimum 16 unique students required at each college.'>
+Student Surveys on Campus Quality</td>
+<td>
+3.9 out of 5 <small>911</small></td>
+</tr>
+<tr>
+<td title='Niche Technology grade, which incorporates statistics and student surveys regarding technology on campus.'>
+Technology Grade</td>
+<td>
+<div class="small section-grade grade-333"></div></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-campus/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl05_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-400"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/most-diverse-campus/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl06_hrefSectionRankingLabel">Diversity</a>
+</h3>
+<div class="placement">
+#114 of 933</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Percentage of faculty belonging to the most represented ethnicity (lower is better).'>
+Faculty Diversity - Most Represented Ethnicity</td>
+<td>
+79 %</td>
+</tr>
+<tr>
+<td title='Ratio of male faculty to female faculty.'>
+Faculty Gender Ratio (M-F)</td>
+<td>
+1.3 : 1</td>
+</tr>
+<tr>
+<td title='Percentage of students who are not legal U.S. residents.'>
+International Students (%)</td>
+<td>
+6 %</td>
+</tr>
+<tr>
+<td title='Percentage of students whose primary residence is not in same state as college.'>
+Out-of-State Students (%)</td>
+<td>
+31 %</td>
+</tr>
+<tr>
+<td title='Percentage of students belonging to the most represented ethnicity (lower is better).'>
+Student Diversity - Most Represented Ethnicity</td>
+<td>
+64 %</td>
+</tr>
+<tr>
+<td title='Ratio of male undergrads to female undergrads.'>
+Student Gender Ratio (M-F)</td>
+<td>
+1.0 : 1</td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the diversity at the college they currently or recently attend(ed). Includes 777,115 reviews and opinions from 99,714 unique students. Minimum 17 unique students required at each college.'>
+Student Surveys on Diversity</td>
+<td>
+3.8 out of 5 <small>701</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/most-diverse-campus/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl06_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+<li class="sub-ranking">
+<div class="grade">
+<div class="large section-grade grade-400"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<a id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl06_rptSubRankingBlock_ctl00_linkSubRankingLabel" href="/rankings/most-politically-diverse-colleges/">Most Politically Diverse Colleges</a>
+<div class="placement">
+#24 of 921</div>
+ </div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title=''>
+Student Surveys on Campus Political Diversity</td>
+<td>
+3.7 out of 5 <small>342</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/most-politically-diverse-colleges/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl06_rptSubRankingBlock_ctl00_hrefSubRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</li>
+<li class="sub-ranking">
+<div class="grade">
+<div class="large section-grade grade-266"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<a id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl06_rptSubRankingBlock_ctl01_linkSubRankingLabel" href="/rankings/most-conservative-colleges/">Most Conservative Colleges</a>
+<div class="placement">
+#565 of 880</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about the conservative political leanings of students at the college they currently or recently attend(ed). Includes 34,748 opinions from 29,295 unique students and alumni. Minimum 10 unique respondents required at each college.'>
+Student Surveys on Campus Political Preferences - Conservative</td>
+<td>
+2.7 out of 5 <small>232</small></td>
+</tr>
+<tr>
+<td title='Students report their personal political leanings while at the college they currently or recently attend(ed). Includes 38,853 opinions from 33,141 unique students and alumni. Minimum 10 unique respondents required at each college.'>
+Student Surveys on Personal Political Preference - Conservative</td>
+<td>
+2.7 out of 5 <small>283</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/most-conservative-colleges/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl06_rptSubRankingBlock_ctl01_hrefSubRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</li>
+<li class="sub-ranking">
+<div class="grade">
+<div class="large section-grade grade-300"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<a id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl06_rptSubRankingBlock_ctl02_linkSubRankingLabel" href="/rankings/most-liberal-colleges/">Most Liberal Colleges</a>
+<div class="placement">
+#316 of 880</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about the political leanings of students at the college they currently or recently attend(ed). Includes 34,748 opinions from 29,295 unique students and alumni. Minimum 10 unique respondents required at each college.'>
+Student Surveys on Campus Political Preferences</td>
+<td>
+3.3 out of 5 <small>232</small></td>
+</tr>
+<tr>
+<td title='Students report their personal political leanings while at the college they currently or recently attend(ed). Includes 38,853 opinions from 33,141 unique students and alumni. Minimum 10 unique respondents required at each college.'>
+Student Surveys on Personal Political Preference</td>
+<td>
+3.3 out of 5 <small>283</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/most-liberal-colleges/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl06_rptSubRankingBlock_ctl02_hrefSubRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-166"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/most-drug-free-campus/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl07_hrefSectionRankingLabel">Drug Safety</a>
+</h3>
+<div class="placement">
+#991 of 1,177</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Rate of alcohol-related arrests on campus per 1,000 students, as reported by the college.'>
+Alcohol-Related Arrests</td>
+<td>
+5 per 1000</td>
+</tr>
+<tr>
+<td title='Rate of alcohol-related referrals on campus per 1,000 students, as reported by the college.'>
+Alcohol-Related Referrals</td>
+<td>
+12 per 1000</td>
+</tr>
+<tr>
+<td title='Rate of drug-related arrests on campus per 1,000 students, as reported by the college.'>
+Drug-Related Arrests</td>
+<td>
+4 per 1000</td>
+</tr>
+<tr>
+<td title='Rate of drug-related referrals on campus per 1,000 students, as reported by the college.'>
+Drug-Related Referrals</td>
+<td>
+4 per 1000</td>
+</tr>
+<tr>
+<td title='Student opinions about drug and alcohol safety at the college they currently or recently attend(ed). Includes 267,663 reviews and opinions from 82,253 unique students. Minimum 10 unique students required at each college.'>
+Student Surveys on Drug Safety</td>
+<td>
+3.1 out of 5 <small>531</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/most-drug-free-campus/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl07_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-266"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+ <h3>
+<a href="/rankings/best-greek-life/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl08_hrefSectionRankingLabel">Greek Life</a>
+</h3>
+<div class="placement">
+#166 of 217</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Percentage of male undergrads that are members of recognized fraternities on campus, as reported by the college.'>
+Percentage of Men in Fraternities</td>
+<td>
+6 %</td>
+</tr>
+<tr>
+<td title='Percentage of female undergrads that are members of recognized sororities on campus, as reported by the college.'>
+Percentage of Women in Sororities</td>
+<td>
+7 %</td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the Greek life at the college they currently or recently attend(ed). Includes 206,960 reviews and opinions from 73,751 unique students. Minimum 10 unique students required at each college.'>
+Student Surveys on Greek Life</td>
+<td>
+3.2 out of 5 <small>520</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-greek-life/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl08_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-400"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-students/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_hrefSectionRankingLabel">Guys & Girls</a>
+</h3>
+<div class="placement">
+#81 of 952
+</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Niche Girls grade, which incorporates statistics and student surveys regarding women on campus.'>
+Girls Grade</td>
+<td>
+<div class="small section-grade grade-400"></div></td>
+</tr>
+<tr>
+<td title='Niche Guys grade, which incorporates statistics and student surveys regarding guys on campus.'>
+Guys Grade</td>
+<td>
+<div class="small section-grade grade-400"></div></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-students/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+<li class="sub-ranking">
+<div class="grade">
+<div class="large section-grade grade-400"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<a id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_rptSubRankingBlock_ctl00_linkSubRankingLabel" href="/rankings/best-students-girls/">Best Students - Girls</a>
+<div class="placement">
+#84 of 950</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about their peer female students at the college they currently or recently attend(ed). Includes 426,590 reviews and opinions from 70,549 unique students. Minimum 12 unique students required at each college.'>
+Student Surveys on Girls</td>
+<td>
+3.9 out of 5 <small>553</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-students-girls/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_rptSubRankingBlock_ctl00_hrefSubRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</li>
+<li class="sub-ranking">
+<div class="grade">
+<div class="large section-grade grade-400"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<a id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_rptSubRankingBlock_ctl01_linkSubRankingLabel" href="/rankings/best-students-guys/">Best Students - Guys</a>
+<div class="placement">
+#78 of 936</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about their peer male students at the college they currently or recently attend(ed). Includes 419,212 reviews and opinions from 69,229 unique students. Minimum 12 unique students required at each college. '>
+Student Surveys on Guys</td>
+<td>
+3.9 out of 5 <small>557</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-students-guys/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_rptSubRankingBlock_ctl01_hrefSubRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</li>
+<li class="sub-ranking">
+<div class="grade">
+<div class="large section-grade grade-400"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<a id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_rptSubRankingBlock_ctl02_linkSubRankingLabel" href="/rankings/hottest-girls/">Most Attractive Girls</a>
+<div class="placement">
+#73 of 730</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about the attractiveness of their female peers at the college they currently or recently attend(ed). Includes 42,269 reviews and opinions from 42,151 unique students. Minimum 16 unique students required at each college.'>
+Student Surveys on Hottest Girls</td>
+<td>
+4.0 out of 5 <small>266</small></td>
+</tr>
+</tbody>
+</table>
+ <div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/hottest-girls/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_rptSubRankingBlock_ctl02_hrefSubRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</li>
+<li class="sub-ranking">
+<div class="grade">
+<div class="large section-grade grade-366"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<a id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_rptSubRankingBlock_ctl03_linkSubRankingLabel" href="/rankings/hottest-guys/">Most Attractive Guys</a>
+<div class="placement">
+#80 of 586</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title=' Student opinions about the attractiveness of their male peers at the college they currently or recently attend(ed). Includes 41,389 reviews and opinions from 41,270 unique students. Minimum 21 unique students required at each college.'>
+Student Surveys on Hottest Guys</td>
+<td>
+3.7 out of 5 <small>259</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/hottest-guys/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_rptSubRankingBlock_ctl03_hrefSubRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</li>
+<li class="sub-ranking">
+<div class="grade">
+<div class="large section-grade grade-166"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<a id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_rptSubRankingBlock_ctl04_linkSubRankingLabel" href="/rankings/friendliest-students/">Friendliest Students</a>
+<div class="placement">
+#551 of 588</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about the friendliness of students at the college they currently or recently attend(ed). Includes 84,115 reviews and opinions from 55,204 unique students. Minimum 28 unique students required at each college.'>
+Student Surveys on Friendliest Students</td>
+<td>
+3.5 out of 5 <small>340</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/friendliest-students/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl09_rptSubRankingBlock_ctl04_hrefSubRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</li>
+</ul>
+</div><div class='ranking-column'>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-233"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/safest-campus/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl10_hrefSectionRankingLabel">Health & Safety</a>
+</h3>
+<div class="placement">
+#879 of 1,127</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Rate of crimes committed on campus property per 1,000 students, as reported by the college.'>
+Campus Crime Rate</td>
+<td>
+0 per 1000</td>
+</tr>
+<tr>
+<td title='Niche Drug Safety grade, which incorporates statistics and student surveys regarding drug and alcohol use on campus.'>
+Drug Safety Grade</td>
+<td>
+<div class="small section-grade grade-166"></div></td>
+</tr>
+<tr>
+<td title='Percentage of full-time freshman enrollment from the prior year that re-enrolled at the college in the current year.'>
+Freshman Retention Rate</td>
+<td>
+80 %</td>
+</tr>
+<tr>
+<td title='Percentage of undergraduate students who graduate within six years.'>
+Graduation Rate (6-year)</td>
+<td>
+56.8 %</td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the health and safety at the college they currently or recently attend(ed). Includes 334,046 reviews and opinions from 82,798 unique students. Minimum 24 unique students required at each college.'>
+Student Surveys on Health & Safety</td>
+<td>
+3.8 out of 5 <small>1001</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/safest-campus/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl10_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-400"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-location/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl11_hrefSectionRankingLabel">Local Area</a>
+</h3>
+<div class="placement">
+#86 of 905</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Niche Off-Campus Dining grade, which incorporates statistics and student surveys regarding restaurants off campus.'>
+Off-Campus Dining Grade</td>
+<td>
+<div class="small section-grade grade-366"></div></td>
+</tr>
+<tr>
+<td title='Niche Off-Campus Housing grade, which incorporates statistics and student surveys regarding student apartments off campus.'>
+Off-Campus Housing Grade</td>
+<td>
+<div class="small section-grade grade-333"></div></td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the local area at the college they currently or recently attend(ed). Includes 888,971 reviews and opinions from 101,060 unique students. Minimum 9 unique students required at each college.'>
+Student Surveys on Local Area</td>
+<td>
+3.7 out of 5 <small>898</small></td>
+</tr>
+ <tr>
+<td title='Niche Transportation grade, which incorporates statistics and student surveys regarding transportation services on and off campus.'>
+Transportation Grade</td>
+<td>
+<div class="small section-grade grade-400"></div></td>
+</tr>
+<tr>
+<td title='Niche Weather grade, which incorporates statistics and student surveys regarding local weather.'>
+Weather Grade</td>
+<td>
+<div class="small section-grade grade-433"></div></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-location/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl11_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-366"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-off-campus-dining/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl12_hrefSectionRankingLabel">Off-Campus Dining</a>
+</h3>
+<div class="placement">
+#186 of 1,195</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about the quality of the off-campus dining near the college they currently or recently attend(ed). Includes 590,031 reviews and opinions from 87,925 unique students. Minimum 11 unique students required at each college.'>
+Student Surveys on Off-Campus Dining</td>
+<td>
+3.8 out of 5 <small>886</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-off-campus-dining/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl12_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-333"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-off-campus-housing/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl13_hrefSectionRankingLabel">Off-Campus Housing</a>
+</h3>
+<div class="placement">
+#251 of 1,144</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Median rent of city/town where college is located.'>
+Median Rent of City/Town</td>
+<td>
+$912</td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the off-campus housing near the college they currently or recently attend(ed). Includes 674,279 reviews and opinions from 83,825 unique students. Minimum 20 unique students required at each college.'>
+Student Surveys on Off-Campus Housing</td>
+<td>
+3.3 out of 5 <small>856</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-off-campus-housing/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl13_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-166"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-parking/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl14_hrefSectionRankingLabel">Parking</a>
+</h3>
+<div class="placement">
+#1,123 of 1,197</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about the quality of the parking at the college they currently or recently attend(ed). Includes 377,853 reviews and opinions from 83,059 unique students. Minimum 10 unique students required at each college. '>
+Student Surveys on Parking</td>
+<td>
+2.6 out of 5 <small>880</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-parking/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl14_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-433"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-party-schools/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl15_hrefSectionRankingLabel">Party Scene</a>
+</h3>
+<div class="placement">
+#43 of 1,195</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about the quality of the party scene at the college they currently or recently attend(ed). Includes 404,701 reviews and opinions from 84,764 unique students. Minimum 14 unique students required at each college.'>
+Student Surveys on Party Scene</td>
+<td>
+3.8 out of 5 <small>1044</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-party-schools/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl15_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-333"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-technology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl16_hrefSectionRankingLabel">Technology</a>
+</h3>
+<div class="placement">
+#253 of 1,056</div>
+</div>
+ <div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Niche Academics grade, which incorporates statistics and student surveys regarding academics on campus.'>
+Academics Grade</td>
+<td>
+<div class="small section-grade grade-300"></div></td>
+</tr>
+<tr>
+<td title='Composite SAT/ACT Math score (normalized to the same scale) of the 25th percentile of enrolled students.'>
+SAT/ACT Math 25th Percentile</td>
+<td>
+SAT: 490<br/>ACT: 21</td>
+</tr>
+<tr>
+<td title='Composite SAT/ACT Math score (normalized to the same scale) of the 75th percentile of enrolled students.'>
+SAT/ACT Math 75th Percentile</td>
+<td>
+SAT: 630<br/>ACT: 27</td>
+</tr>
+<tr>
+<td title='Student opinions about the quality of the technology at the college they currently or recently attend(ed). Includes 673,839 reviews and opinions from 92,833 unique students. Minimum 20 unique students required at each college. '>
+Student Surveys on Technology</td>
+<td>
+3.9 out of 5 <small>915</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-technology/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl16_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-400"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-transportation/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl17_hrefSectionRankingLabel">Transportation</a>
+</h3>
+<div class="placement">
+#91 of 1,204</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Student opinions about the quality of the transportation at the college they currently or recently attend(ed). Includes 672,133 reviews and opinions from 102,342 unique students. Minimum 10 unique students required at each college. '>
+Student Surveys on Transportation</td>
+<td>
+3.9 out of 5 <small>992</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-transportation/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl17_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+<ul class="ranking-wrap">
+<li class="ranking-cat">
+<div class="grade">
+<div class="large section-grade grade-433"></div>
+<div class="reveal-factors"></div>
+<div class="close-factors"></div>
+</div>
+<div class="label">
+<h3>
+<a href="/rankings/best-weather/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl18_hrefSectionRankingLabel">Weather</a>
+</h3>
+<div class="placement">
+#18 of 1,094</div>
+</div>
+<div class="factors-wrap">
+<div class="factors">
+<table>
+<thead>
+<tr>
+<th>Factor</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td title='Average monthly precipitation over the last 20 years. For the purposes of calculation, mean was considered ideal, with extremes receiving a lower score.'>
+Average Monthly Precipitation</td>
+<td>
+40.7 in.</td>
+</tr>
+<tr>
+<td title='Average monthly snowfall over the last 20 years (lower is better).'>
+Average Monthly Snowfall</td>
+<td>
+0.0 in.</td>
+</tr>
+<tr>
+<td title='Average number of days per year with clear skies. Data was primarily at the metro level. When the data was unavailable for the location, the state average was assigned.'>
+Average Sunny Days per Year</td>
+<td>
+310</td>
+</tr>
+<tr>
+<td title='Highest average monthly high temperature per year over the last 20 years (lower is better).'>
+Highest Average Monthly High Temperature</td>
+<td>
+106 °F</td>
+</tr>
+<tr>
+<td title='Lowest average monthly low temperature per year over the last 20 years (higher is better).'>
+Lowest Average Monthly Low Temperature</td>
+<td>
+41 °F</td>
+</tr>
+<tr>
+<td title=' Student opinions about the quality of the weather at the college they currently or recently attend(ed). Includes 17,485 reviews and opinions from 17,481 unique students. Minimum 12 unique students required at each college. Colleges located within the same county were averaged together.'>
+Student Surveys on Weather</td>
+<td>
+4.2 out of 5 <small>324</small></td>
+</tr>
+</tbody>
+</table>
+<div class="factors-info">
+The values for this school were current at the time this
+ranking was calculated and may not represent the most recent
+available data. For more details,
+<a href="/rankings/best-weather/methodology/" id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_rptSectionRankingBlock_ctl18_hrefSectionRankingBlock" target="_blank">see how these values were used</a> to calculate this ranking.</div>
+</div>
+</div>
+</li>
+</ul>
+</div></div>
+<div class="bannerAd clear">
+<div id="ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_BelowContentSchoolAd_adunit" class="ad-unit" style="height:90px;width:728px;"></div><script type="text/javascript">
+$(document).ready(function () {
+googletag.cmd.push(function () { googletag.display('ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_BelowContentSchoolAd_adunit');});
+});</script></div></div>
+</div></div>
+</div><div class="clear"></div></div><div class="footer"><div class="row"><div class="large-4 columns social">
+<a class="icon twitter" href="http://twitter.com/nichesocial" target="_blank"></a>
+<span class="social-platform">Follow us on Twitter</span>
+<a class="social-name" href="http://twitter.com/nichesocial" target="_blank">@nichesocial</a></div><div class="large-5 columns social">
+<a class="icon facebook"  href="http://facebook.com/nichesocial" target="_blank"></a>
+<span class="social-platform">Like us on Facebook</span> <span class="fb-like" data-href="https://www.facebook.com/nichesocial" data-width="50" data-layout="button_count" data-show-faces="false" data-send="false"></span>
+<a class="social-name" href="http://facebook.com/nichesocial" target="_blank">facebook.com/nichesocial</a>
+</div><div class="large-3 columns social">
+<a href="http://www.linkedin.com/company/58426" class="icon linkedin small" target="_blank"></a>
+<a href="http://niche-official.tumblr.com/" class="icon tumblr small" target="_blank"></a>
+<a href="https://plus.google.com/103310846660948341580" class="icon googleplus small" target="_blank"></a></div></div><div class="row foot-brand"><a class="horizontal-logo" href="https://niche.com/" target="_blank"></a><div class="vertical"><a href="https://local.niche.com/" target="_blank">Local</a></div><div class="vertical"><a href="https://k12.niche.com/" target="_blank">K-12</a></div><div class="vertical"><a href="/">Colleges</a></div><div class="vertical"><a href="https://ink.niche.com" target="_blank">Ink</a></div></div>
+<ul class="footer-links row"><li class="copyright">&copy;2015 Niche.com Inc.</li><li><a href="https://niche.com/about/company/" target="_blank">About Us</a></li><li><a href="https://niche.com/about/advertising/" target="_blank">Advertising</a></li><li><a href="https://blog.niche.com" target="_blank">Blog</a></li><li><a href="https://niche.com/contact/" target="_blank">Contact</a></li><li><a href="https://niche.com/about/data/" target="_blank">Data</a></li><li><a href="http://hiring.niche.com" target="_blank">Jobs</a></li><li><a href="https://niche.com/about/licensing/" target="_blank">Licensing</a></li><li><a href="https://niche.com/about/press/" target="_blank">Press</a></li><li><a href="https://niche.com/legal/privacy/" target="_blank">Privacy Policy</a></li><li><a href="https://niche.com/legal/terms/" target="_blank">Terms of Use</a></li></ul>
+<div class="seo-links"><div class="link-column">
+<h4>Colleges</h4>
+<ul>
+<li><a href="/boston-college/">Boston College</a></li>
+<li><a href="/columbia-university/">Columbia University</a></li>
+<li><a href="/drexel-university/">Drexel University</a></li>
+<li><a href="/full-sail-university/">Full Sail University</a></li>
+<li><a href="/harvard-university/">Harvard University</a></li>
+<li><a href="/liberty-university/">Liberty University</a></li>
+<li><a href="/new-york-university/">New York University</a></li>
+<li><a href="/northeastern-university/">Northeastern University</a></li>
+<li><a href="/penn-state/">Penn State</a></li>
+<li><a href="/rutgers-university/">Rutgers University</a></li>
+<li><a href="/st-johns-university/">St. John's University</a></li>
+<li><a href="/stanford-university/">Stanford University</a></li>
+<li><a href="/university-of-california----irvine/">UC Irvine</a></li>
+<li><a href="/university-of-california----los-angeles/">UCLA</a></li>
+<li><a href="/virginia-tech/">Virginia Tech</a></li>
+</ul></div><div class="link-column">
+<h4>College Rankings</h4>
+<ul>
+<li><a href="/rankings/best-overall/">Best Overall</a></li>
+<li><a href="/rankings/best-academics/">Best Academics</a></li>
+<li><a href="/rankings/best-athletics/">Best Athletics</a></li>
+<li><a href="/rankings/best-campus/">Best Campus</a></li>
+<li><a href="/rankings/best-campus-food/">Best Campus Food</a></li>
+<li><a href="/rankings/best-dorms/">Best Dorms</a></li>
+<li><a href="/rankings/best-greek-life/">Best Greek Life</a></li>
+<li><a href="/rankings/best-party-schools/">Best Party Schools</a></li>
+<li><a href="/rankings/best-students-girls/">Best Students - Girls</a></li>
+<li><a href="/rankings/best-students-guys/">Best Students - Guys</a></li>
+<li><a href="/rankings/hardest-to-get-in/">Hardest Colleges to Get In</a></li>
+<li><a href="/rankings/largest-colleges/">Largest Colleges</a></li>
+<li><a href="/rankings/most-diverse-campus/">Most Diverse Campus</a></li>
+<li><a href="/rankings/most-expensive/">Most Expensive Colleges</a></li>
+<li><a href="/rankings/safest-campus/">Safest Campus</a></li>
+</ul></div><div class="link-column">
+<h4>Niche Scholarships</h4>
+<ul>
+<li><a href="/scholarship/apply.aspx?source=f">$2,000 No Essay Scholarship</a></li>
+<li><a href="/localsurvey/?source=f">$1,000 Local Survey Scholarship</a></li>
+<li><a href="/survey/?source=f">$1,000 College Survey Scholarship</a></li>
+<li><a href="/studentsurvey/?source=f">$1,000 Student Survey Scholarship</a></li>
+<li><a href="/parentsurvey/?source=f">$1,000 Parent Survey Scholarship</a></li>
+<li><a href="/scholarship/high-school-freshman-scholarship/?source=f">$500 High School Freshman Scholarship</a></li>
+<li><a href="/scholarship/high-school-sophomore-scholarship/?source=f">$500 High School Sophomore Scholarship</a></li>
+<li><a href="/scholarship/high-school-junior-scholarship/?source=f">$500 High School Junior Scholarship</a></li>
+<li><a href="/scholarship/high-school-senior-scholarship/?source=f">$500 High School Senior Scholarship</a></li>
+<li><a href="/scholarship/communitycollege-scholarship/?source=f">$500 Community College Scholarship</a></li>
+<li><a href="/scholarship/graduate-student-scholarship/?source=f">$500 Graduate Student Scholarship</a></li>
+<li><a href="https://ink.niche.com/findyourniche-scholarship?source=f">$100 #FindYourNiche Scholarship</a></li>
+<li><a href="https://ink.niche.com/list-of-scholarships/?source=f">2014 Scholarship Deadlines</a></li>
+<li><a href="https://scholarships.niche.com/winners/">Scholarship Winners</a></li>
+<li><a href="/scholarships/?source=f">Scholarship Search</a></li>
+</ul></div><div class="link-column">
+<h4>College Articles</h4>
+<ul>
+<li><a href="https://ink.niche.com/test-optional-trend-grows-among-colleges/">Best Test-Optional Colleges</a></li>
+<li><a href="https://ink.niche.com/early-admissions-path/">Colleges with Early Admissions</a></li>
+<li><a href="https://ink.niche.com/rolling-admissions/">Colleges with Rolling Admissions</a></li>
+<li><a href="https://ink.niche.com/everything-to-know-about-fafsa/">Filling out the FAFSA</a></li>
+<li><a href="https://ink.niche.com/hbcu-schools-history-relevance/">HBCU Schools</a></li>
+<li><a href="https://ink.niche.com/rise-of-the-ivy-league/">Ivy League Colleges and Universities</a></li>
+<li><a href="https://ink.niche.com/male-colleges-4-remain/">Men's Colleges</a></li>
+<li><a href="https://ink.niche.com/data-dive-high-school-class-of-2014/">Most Popular Colleges for 2014</a></li>
+<li><a href="https://ink.niche.com/public-ivies-bigger-better/">The Public Ivies</a></li>
+<li><a href="https://ink.niche.com/top-safety-schools-state/">Top Safety Schools</a></li>
+<li><a href="https://ink.niche.com/academic-degrees-explained/">Types of College Degrees</a></li>
+<li><a href="https://ink.niche.com/the-history-of-womens-colleges/">Women's Colleges</a></li>
+</ul></div></div></div><!-- Facebook Like Button --><script>(function (d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=298822776951871";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div><input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="287F468A" /><input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Krbu2qSSSyEEacGHL2pr/+vc+QlwJyNFzqMdB3SrPV/LAjfUArz/lXspJ0jPqvvTGiG0ehDDmhTPSeSosinwqjB180DPPKVcM+drsedYNJa3paFmnCnBY/xOnj6e5xt+NRlwJA==" /></div></form>
+<div class="niche-acct-menu">
+<div class="my-schools">
+<h3>My Colleges</h3>
+<div id="niche-menu-schools"><!-- Schools --></div></div>
+<div class="acct-nav"><ul>
+<li><a href="/">Home</a></li>
+<ul>
+</ul>
+<li><a href="/account/manage.aspx" rel="profile">My Profile</a></li>
+<li><a href="/logout.aspx">Log out</a></li></ul>
+<div class="modal">
+<div class="close">&#x2421;</div>
+</div></div></div>
+<div id="schoolAjaxPopup" class="schoolAjaxPopup"></div><script type="text/javascript">
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function () {
+var gads = document.createElement("script");
+gads.async = true;
+gads.type = "text/javascript";
+var useSSL = "https:" == document.location.protocol;
+gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js?ts=635735346843683261";
+var node = document.getElementsByTagName("script")[0];
+node.parentNode.insertBefore(gads, node);
+})();
+googletag.cmd.push(function() {
+googletag.pubads().setTargeting('role', 'other');
+googletag.pubads().setTargeting('school', 'arizona-state-university');
+googletag.pubads().setTargeting('section', 'rankings');
+googletag.pubads().setTargeting('iped', '104151');
+googletag.pubads().setTargeting('schrelig', 'none');
+googletag.pubads().setTargeting('schtype', 't');
+googletag.pubads().setTargeting('schcontrol', 'public');
+googletag.pubads().setTargeting("url", "252B6CC79485BB08070998F48A361964");
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});</script><script type="text/javascript">
+googletag.cmd.push(function() { googletag.defineSlot('/1028358/ca-pub-4386007180384455/SchoolPageAboveFold300x250', [300, 250], 'ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_TopWidgetAd_adunit').addService(googletag.pubads());
+googletag.defineSlot('/1028358/ca-pub-4386007180384455/SchoolPageBTFRolling160x600', [160, 600], 'ctl00_ctl00_NavPlaceHolder_ScrollingSchoolPageAd_adunit').addService(googletag.pubads());
+googletag.defineSlot('/1028358/ca-pub-4386007180384455/SchoolPageBelowFold728x90', [728, 90], 'ctl00_ctl00_MainContentPlaceholder_MainContentPlaceholder_BelowContentSchoolAd_adunit').addService(googletag.pubads());
+googletag.defineSlot('/1028358/ca-pub-4386007180384455/TopLeaderboard728x90', [728, 90], 'ctl00_ctl00_headerAd_adunit').addService(googletag.pubads());});</script></body></html>
