@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import urllib2
-
+import mechanize
+import cookielib
 
 # r = urllib.urlopen('https://colleges.niche.com/arizona-state-university/rankings/').read()
 # soup = BeautifulSoup(r)
