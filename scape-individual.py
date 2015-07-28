@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
 import urllib2
-import mechanize
-import cookielib
+
 
 # r = urllib.urlopen('https://colleges.niche.com/arizona-state-university/rankings/').read()
 # soup = BeautifulSoup(r)
@@ -10,8 +9,6 @@ soup = BeautifulSoup(open('/Users/ellliottribner/development/admit_hub/colleges-
 
 name = soup.find('h1', {"itemprop": "name"}).find('a').text
 overall_grade = soup.find("div", { "class" : "overall-grade" })["class"][2]
-# town = soup.find('span', {"itemprop": "addressLocality"})
-# state = soup.find('span', {"itemprop": "addressRegion"})
 
 header = soup.find("ul", {"class": "cf"})
 headerCategories = header.find_all('li')
@@ -29,7 +26,14 @@ categoryStats = {}
 for i in categories:
 	categoryTitle =  i.find('h3').text.strip()
 	categoryGrade =  i.find("div", {"class" : "section-grade"})["class"][2]
-	categoryStats[categoryTitle] = categoryGrade 
+	rankArray = i.find("div", {"class": "placement"}).text.split(' ')
+	if rankArray[0].strip()[0] == '#':
+		schoolRank = rankArray[0].strip()
+		totalRank = rankArray[2].strip()
+	else:
+		schoolRank = 'unranked'
+		totalRank = 'unranked'
+	categoryStats[categoryTitle] = {'category- grade': categoryGrade, 'category-rank': {'school-rank': schoolRank, 'total-rank': totalRank }}
 
 masterHash = { "name": name, "overall-grade": overall_grade, "headerStats": headerStats, "categoryStats": categoryStats }
 print masterHash
