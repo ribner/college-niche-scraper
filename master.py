@@ -68,9 +68,11 @@ with open('college-niche.csv') as csvfile:
 	filereader = csv.reader(csvfile, delimiter=' ', quotechar='|')
 	for row in filereader:
 		name, schoolHash = getStatsHash(row[0])
-		masterHash[name] = schoolHash
-		with open('college-niche-data.txt', 'w') as outfile:
-			json.dump(masterHash, outfile) 
+		if len(schoolHash["categoryStats"]) > 0:
+			masterHash[name] = schoolHash
+
+with open('college-niche-data.txt', 'w') as outfile:
+			json.dump(masterHash, outfile)
 
 driver.close()
 

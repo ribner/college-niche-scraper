@@ -33,7 +33,7 @@ for i in categories:
 	else:
 		schoolRank = 'unranked'
 		totalRank = 'unranked'
-	categoryStats[categoryTitle] = {'category- grade': categoryGrade, 'category-rank': {'school-rank': schoolRank, 'total-rank': totalRank }}
+	categoryStats[categoryTitle] = {'category-grade': categoryGrade, 'category-rank': {'school-rank': schoolRank, 'total-rank': totalRank }}
 
 masterHash = { "name": name, "overall-grade": overall_grade, "headerStats": headerStats, "categoryStats": categoryStats }
 print masterHash
